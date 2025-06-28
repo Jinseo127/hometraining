@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Training</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'videomanagement/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Home Training</h1>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#">Main profile ▼</a></li>
+                    <li><a href="{% url 'video' %}">video ▼</a></li>
+                    <li><a href="{% url 'report' %}">report ▼</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="content-container">
+            <div class="video-section">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/UoC_O3HzsH0" title="Squat Exercise Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="info-section">
+                <h2>The most effective squat</h2>
+                <div class="score-container">
+                    <span class="score-value">98</span>
+                    <span class="score">score!!!</span>
+                </div>
+                <div class="calories">
+                    예상 칼로리: 177kcal<br>소요시간: 33min<br>총 운동횟수: 5회
+                </div>
+                <p>왼쪽 다리에 비해 오른쪽 다리가 부실합니다. 동작의 완성도가 떨어지는 모습을 볼 수 있었습니다. 체력을 조금 더 기르시오</p>
+                <ul>
+                    <li>1차 일치율: 90%</li>
+                    <li>2차 일치율: 92%</li>
+                    <li>3차 일치율: 93%</li>
+                    <li>4차 일치율: 96%</li>
+                    <li>5차 일치율: 98%</li>
+                </ul>
+                <button class="next-workout-button">다음 운동하러 가기</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
