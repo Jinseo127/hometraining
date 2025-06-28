@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nav-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin-right: 250px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 200px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #b3d9ff;
+    border-bottom: 2px solid #ccc;
+    justify-content: flex-start;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.report-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.report-item {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 90%; /* 넓이를 90%로 설정하여 공간을 더 많이 차지하도록 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-item h2 {
+    margin: 0;
+    font-size: 18px;
+    width: 15%;
+}
+
+.report-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* 수직으로 가운데 정렬 */
+}
+
+.graph-image {
+    width: 300px;  /* 그래프 이미지를 더 작게 조정 */
+    height: auto;
+}
+
+.report-text {
+    margin-left: 300px;  /* 추가적인 여백을 주어 우측으로 이동 */
+    flex-grow: 1;
+    text-align: left;  /* 텍스트를 왼쪽으로 정렬 */
+}
+
+.report-text p {
+    margin: 0;
+    font-size: 14px;
+}

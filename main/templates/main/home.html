@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Home Training</h1>
+        </div>
+        <div class = "nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="openUserPage()">Main profile ▼</a></li>
+                    <li><a href="{% url 'video' %}">video ▼</a></li>
+                    <li><a href="{% url 'report' %}">report ▼</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="hero">
+            <img src="{% static 'main/images/hero.jpg' %}" alt = "Home Training Image">
+            <div class = "hero-text">
+                <h1>Home Training</h1>
+                <p>정보를 입력하고 체력단련을 해보세요<br>시간과 장소제약 없이 어디서든 운동할 수 있습니다.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function openUserPage() {
+            window.open("{% url 'user' %}", "_blank", "width=800,height=600");
+        }
+    </script>
+
+</body>
+</html>

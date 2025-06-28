@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Report Page</title>
+    {% load static %}
+    {% load custom_filters %}
+    <link rel="stylesheet" href="{% static 'reportmanagement/css/style.css' %}">
+    <style>
+        .graph-image {
+            width: 300px;  /* 그래프 이미지를 더 작게 조정 */
+            height: auto;
+        }
+        .report-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;  /* 수직으로 가운데 정렬 */
+        }
+        .report-text {
+            margin-left: 300px;  /* 추가적인 여백을 주어 우측으로 이동 */
+            flex-grow: 1;
+            text-align: left;  /* 텍스트를 왼쪽으로 정렬 */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Home Training</h1>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="#">Main profile ▼</a></li>
+                    <li><a href="{% url 'video' %}">video ▼</a></li>
+                    <li><a href="{% url 'report' %}">report ▼</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="{% static 'reportmanagement/images/profile.jpg' %}" alt="Profile Image">
+            </div>
+            <div class="profile-info">
+                <h2>숭실대 꼬맹이</h2>
+            </div>
+        </div>
+        <div class="report-section">
+            {% for exercise in exercises %}
+            <div class="report-item">
+                <h2>{{ exercise.name }}</h2>
+                <div class="report-details">
+                    <img src="data:image/png;base64,{{ exercise_graphs|get_item:exercise.id }}" alt="Graph" class="graph-image">
+                    <div class="report-text">
+                        <p>시행 횟수: {{ exercise.attempts }} <br> 최근 피드백: {{ exercise.feedback }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
